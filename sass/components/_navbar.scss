@@ -5,15 +5,36 @@
     align-items: center;
     border-bottom: 1.5px solid $lineGrey;
 
+    @include m-large {
+        width: 90%;
+    }
+
+    @include medium {
+        height: 67px;
+    }
+
     .navbar__logo {
         width: 17.66%;
         height: auto;
+
+        @include m-large {
+            width: 22%;
+
+            img {
+                width: 120px;
+                height: 30px;
+            }
+        }
     }
 
     .navbar__items {
         width: 82.34%;
         height: 100%;
         @include flex-group(flex, space-between, center);
+
+        @include medium {
+            justify-content: end;
+        }
 
         .items {
             width: 43.6%;
@@ -22,18 +43,57 @@
             @include flex-group(flex, space-between, center);
             @include typography(15px, 400, 26px, normal, $grey);
 
+            @include m-large {
+                width: 60%;
+            }
+
+            @include medium {
+                display: none;
+                position: absolute;
+                flex-direction: column;
+                top: 0;
+                border: 1px solid red;
+                left: 0;
+                width: 250px;
+                justify-content: normal;
+                align-items: start;
+                padding: 25px;
+                background: #fff;
+                box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.75);
+
+
+            }
+
             .item {
                 height: 100%;
                 display: flex;
                 align-items: center;
                 border-bottom: 4px solid transparent;
+
+
+
                 &:hover {
                     border-bottom: 4px solid orange;
                 }
+
                 .item__link {
                     text-decoration: none;
+
                     &:hover {
                         color: $grey-dark;
+                    }
+                }
+
+                @include medium {
+                    height: auto;
+
+                    a {
+                        color: #1D2026;
+                        font-family: "Kumbh Sans";
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 26px;
                     }
                 }
             }
@@ -46,22 +106,90 @@
             align-items: center;
             justify-content: space-between;
 
+            @include m-large {
+                width: 20%;
+            }
+
+            @include medium {
+                width: 15%;
+            }
+
             .profile__cart {
-                img {
-                    width: 30px;
-                    height: 30px;
+                width: 30px;
+                height: 30px;
+                color: $grey;
+
+                &:hover {
+                    color: $grey-dark;
+                }
+
+                @include medium {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                span {
+                    font-size: 30px;
+
+                    @include medium {
+                        font-size: 20px;
+                    }
                 }
             }
 
             .profile__photo {
                 display: flex;
                 align-items: center;
+                border-radius: 50px;
+                border: 2.5px solid transparent;
+
+                &:hover {
+                    border-radius: 50px;
+                    border: 2.5px solid #FF7E1B;
+                }
+
+                @include medium {
+                    width: 30px;
+                    height: 30px;
+                }
 
                 img {
                     width: 70px;
                     height: 70px;
+
+                    @include m-large {
+                        width: 50px;
+                        height: 50px;
+                    }
+
+                    @include medium {
+                        width: 30px;
+                        height: 30px;
+                    }
                 }
             }
         }
+    }
+
+    .button-open {
+        width: 20px;
+        border: none;
+        background: transparent;
+        margin-right: 16px;
+
+        .open {
+            display: none;
+            margin-right: 16px;
+            font-size: 20px;
+
+            @include medium {
+                display: block;
+            }
+        }
+
+    }
+
+    .close {
+        display: none;
     }
 }
