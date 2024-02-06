@@ -14,11 +14,17 @@ cartIcon.addEventListener('click', function(event) {
 
 
 
+const items = document.getElementById('items')
+const openBtn = document.getElementById('button-open')
+const closeBtn = document.getElementById('button-close')
 
 
-
-
-
+openBtn.addEventListener('click', function() {
+    items.classList.add('items--visible')
+})
+closeBtn.addEventListener('click', function() {
+    items.classList.remove('items--visible')
+})
 
 
 

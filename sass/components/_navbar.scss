@@ -48,11 +48,11 @@
             }
 
             @include medium {
-                /* display: none; */
+                opacity: 0;
+                visibility: hidden;
                 position: absolute;
                 flex-direction: column;
                 top: 0;
-                border: 1px solid red;
                 left: 0;
                 width: 250px;
                 justify-content: normal;
@@ -60,7 +60,12 @@
                 padding: 25px;
                 background: #fff;
                 box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.75);
+                transition: 0.5s;
+            }
 
+            &.items--visible {
+                opacity: 1;
+                visibility: visible;
             }
 
             .item {
@@ -68,8 +73,6 @@
                 display: flex;
                 align-items: center;
                 border-bottom: 4px solid transparent;
-
-
 
                 &:hover {
                     border-bottom: 4px solid orange;

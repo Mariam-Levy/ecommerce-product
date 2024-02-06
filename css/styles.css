@@ -23,6 +23,7 @@ body {
   width: 20px;
   border: none;
   background: transparent;
+  color: #69707D;
   margin-right: 16px;
 }
 .button-open .open {
@@ -38,8 +39,8 @@ body {
 
 .button-close {
   display: none;
-  background: transparent;
   border: none;
+  background: transparent;
   color: #69707D;
   margin-bottom: 53.78px;
 }
@@ -49,7 +50,7 @@ body {
   }
 }
 .button-close .close {
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .navbar {
@@ -114,11 +115,11 @@ body {
 }
 @media (max-width: 767px) {
   .navbar .navbar__items .items {
-    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
     flex-direction: column;
     top: 0;
-    border: 1px solid red;
     left: 0;
     width: 250px;
     justify-content: normal;
@@ -126,7 +127,12 @@ body {
     padding: 25px;
     background: #fff;
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.75);
+    transition: 0.5s;
   }
+}
+.navbar .navbar__items .items.items--visible {
+  opacity: 1;
+  visibility: visible;
 }
 .navbar .navbar__items .items .item {
   height: 100%;

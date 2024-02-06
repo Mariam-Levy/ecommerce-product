@@ -2,6 +2,7 @@
     width: 20px;
     border: none;
     background: transparent;
+    color: #69707D;
     margin-right: 16px;
 
     .open {
@@ -18,15 +19,14 @@
 
 .button-close {
     display: none;
-    background: transparent;
     border: none;
+    background: transparent;
     color: #69707D;
     margin-bottom: 53.78px;
     @include medium {
         display: block;
-
     }
     .close {
-        font-size: 15px;
+        font-size: 20px;
     }
 }
