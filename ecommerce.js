@@ -11,3 +11,19 @@ cartIcon.addEventListener('click', function(event) {
     // Muestra u oculta el modal
     cartModal.style.display = isModalVisible ? 'none' : 'block';
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

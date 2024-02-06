@@ -48,7 +48,7 @@
             }
 
             @include medium {
-                display: none;
+                /* display: none; */
                 position: absolute;
                 flex-direction: column;
                 top: 0;
@@ -60,7 +60,6 @@
                 padding: 25px;
                 background: #fff;
                 box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.75);
-
 
             }
 
@@ -86,6 +85,10 @@
 
                 @include medium {
                     height: auto;
+
+                    &:not(:last-child) {
+                        margin-bottom: 20px;
+                    }
 
                     a {
                         color: #1D2026;
@@ -171,25 +174,5 @@
         }
     }
 
-    .button-open {
-        width: 20px;
-        border: none;
-        background: transparent;
-        margin-right: 16px;
-
-        .open {
-            display: none;
-            margin-right: 16px;
-            font-size: 20px;
-
-            @include medium {
-                display: block;
-            }
-        }
-
-    }
-
-    .close {
-        display: none;
-    }
+    
 }

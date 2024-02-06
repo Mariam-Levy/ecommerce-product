@@ -19,6 +19,39 @@ body {
   font-family: "Kumbh Sans", sans-serif;
 }
 
+.button-open {
+  width: 20px;
+  border: none;
+  background: transparent;
+  margin-right: 16px;
+}
+.button-open .open {
+  display: none;
+  margin-right: 16px;
+  font-size: 20px;
+}
+@media (max-width: 767px) {
+  .button-open .open {
+    display: block;
+  }
+}
+
+.button-close {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #69707D;
+  margin-bottom: 53.78px;
+}
+@media (max-width: 767px) {
+  .button-close {
+    display: block;
+  }
+}
+.button-close .close {
+  font-size: 15px;
+}
+
 .navbar {
   width: 77%;
   height: 116px;
@@ -81,7 +114,7 @@ body {
 }
 @media (max-width: 767px) {
   .navbar .navbar__items .items {
-    display: none;
+    /* display: none; */
     position: absolute;
     flex-direction: column;
     top: 0;
@@ -113,6 +146,9 @@ body {
 @media (max-width: 767px) {
   .navbar .navbar__items .items .item {
     height: auto;
+  }
+  .navbar .navbar__items .items .item:not(:last-child) {
+    margin-bottom: 20px;
   }
   .navbar .navbar__items .items .item a {
     color: #1D2026;
@@ -193,25 +229,6 @@ body {
     width: 30px;
     height: 30px;
   }
-}
-.navbar .button-open {
-  width: 20px;
-  border: none;
-  background: transparent;
-  margin-right: 16px;
-}
-.navbar .button-open .open {
-  display: none;
-  margin-right: 16px;
-  font-size: 20px;
-}
-@media (max-width: 767px) {
-  .navbar .button-open .open {
-    display: block;
-  }
-}
-.navbar .close {
-  display: none;
 }
 
 .cart {

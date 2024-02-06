@@ -1,0 +1,32 @@
+.button-open {
+    width: 20px;
+    border: none;
+    background: transparent;
+    margin-right: 16px;
+
+    .open {
+        display: none;
+        margin-right: 16px;
+        font-size: 20px;
+
+        @include medium {
+            display: block;
+        }
+    }
+
+}
+
+.button-close {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #69707D;
+    margin-bottom: 53.78px;
+    @include medium {
+        display: block;
+
+    }
+    .close {
+        font-size: 15px;
+    }
+}
