@@ -4,6 +4,9 @@
     background: transparent;
     color: #69707D;
     margin-right: 16px;
+    @include x-small {
+        width: 6%;
+    }
 
     .open {
         display: none;

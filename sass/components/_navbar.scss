@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     border-bottom: 1.5px solid $lineGrey;
+    margin-bottom: 90px;
 
     @include m-large {
         width: 90%;
@@ -11,6 +12,11 @@
 
     @include medium {
         height: 67px;
+    }
+
+    @include x-small {
+        width: 100%;
+        padding: 19px 24px 20px 24px;
     }
 
     .navbar__logo {
@@ -25,6 +31,14 @@
                 height: 30px;
             }
         }
+        @include x-small {
+            width: 35%;
+            height: 27px;
+            img {
+                width: 100px;
+                height: 27px;
+            }
+        }
     }
 
     .navbar__items {
@@ -34,6 +48,9 @@
 
         @include medium {
             justify-content: end;
+        }
+        @include x-small {
+            width: 53%;
         }
 
         .items {
@@ -60,7 +77,6 @@
                 padding: 25px;
                 background: #fff;
                 box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.75);
-                transition: 0.5s;
             }
 
             &.items--visible {
@@ -119,6 +135,10 @@
             @include medium {
                 width: 15%;
             }
+            
+            @include x-small {
+                width: 40%;
+            }
 
             .profile__cart {
                 width: 30px;
@@ -132,6 +152,10 @@
                 @include medium {
                     width: 20px;
                     height: 20px;
+                }
+        
+                @include x-small {
+                    
                 }
 
                 span {
