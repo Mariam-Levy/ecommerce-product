@@ -28,8 +28,25 @@ closeBtn.addEventListener('click', function() {
 
 
 
+//contador
+let count = 0;
+const value = document.getElementById('value');
+const btns = document.querySelectorAll('.btn');
 
+btns.forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+        const styles = e.currentTarget.classList;
 
+        if(styles.contains('decrease')) {
+            count--;
+            value.textContent = count;
+        } else if (styles.contains('increase')) {
+            count++;
+            value.textContent = count;
+        }
+        value.textContent = count;
+    })
+})
 
 
 

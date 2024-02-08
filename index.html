@@ -54,8 +54,24 @@
                 <div class="cart__title">
                     <h3>Cart</h3>
                 </div>
-                <div class="cart__content">
+                <div class="cart__empty">
                     <p>Your cart is empty.</p>
+                </div>
+        
+                <div class="cart__buy">
+                    <div class="buy__content">
+                        <div class="buy__img">
+                            <img src="./img/buy-Shoes.svg" alt="">
+                        </div>
+                        <div class="buy__texts">
+                            <p>Fall Limited Edition Sneakers</p>
+                            <p>$125.00 x <span class="amount">3</span> <span class="total-price">$375.00</span></p>
+                        </div>
+                        <div class="delete-icon"><span class="material-symbols-outlined">delete</span></div>
+                    </div>
+                    <div class="info__button">
+                        <button class="button__cart button__cart--modal">Checkout</button>
+                    </div>
                 </div>
         </div>
 
@@ -92,12 +108,14 @@
                 <p class="info__discount">$250.00</p>
                 <div class="info__cart">
                     <div class="info__counter">
-                        <button class="btn decrease">-</button>
+                        <button class="btn decrease"><span class="material-symbols-outlined">
+                            check_indeterminate_small
+                            </span></button>
                         <span id="value">0</span>
-                        <button class="btn increase">+</button>
+                        <button class="btn increase"><span class="material-symbols-outlined">add</span></button>
                     </div>
                     <div class="info__button">
-                        <button><span class="material-symbols-outlined">shopping_cart</span>Add to cart</button>
+                        <button class="button__cart"><span class="material-symbols-outlined">shopping_cart</span>Add to cart</button>
                     </div>
                 </div>
             </div>
