@@ -1,25 +1,32 @@
 .cart {
     display: none;
-    position: absolute;
-    /* width: 22%;
-    height: 32.7%; */
-    width: 28.2%;
-    height: 27.7%;
     top: 104px;
-    right: 142px;
     padding: 24px;
-    border-radius: 10px;
     border-radius: 10px;
     background: $white;
     box-shadow: 0px 20px 50px -20px rgba(29, 32, 38, 0.50);
+    /* display: block; */
+    position: absolute;
+    height: auto;
+    /* width: calc(96% - 2px); */
+    /* right: 0;
+    left: 0;
+    margin: 0 auto; */
+
+    right: 142px;
+    width: 35%;
+    
 
     @include medium {
-        width: 80%;
+        width: calc(96% - 2px);
         height: 45%;
         right: 40px;
         left: 128px;
         position: initial;
+        margin-top: 20px;
+        z-index: 1;
     }
+
     @include x-small {
         width: 95%;
         height: 45%;
@@ -39,29 +46,31 @@
         display: none;
         height: 73.4%;
         width: 100%;
-        /* @include flex-group(flex, center, center); */
     }
 
-    .cart__buy{
+    .cart__buy {
         width: 100%;
+
         .buy__content {
             display: flex;
             margin-bottom: 24px;
             justify-content: space-between;
             align-items: center;
-            .buy__img{
+
+            .buy__img {
                 width: 50px;
                 height: 50px;
             }
-            .buy__texts{
+
+            .buy__texts {
                 color: #69707D;
                 font-family: "Kumbh Sans";
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 26px;
-                .amount{}
-                .total-price{
+
+                .total-price {
                     color: #1D2026;
                     font-family: "Kumbh Sans";
                     font-size: 16px;
@@ -70,10 +79,12 @@
                     line-height: 26px;
                 }
             }
-            .delete-icon{
+
+            .delete-icon {
                 color: #C3CAD9;
             }
         }
+
         .info__button {
             width: 100%;
             height: 56px;

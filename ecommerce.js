@@ -2,6 +2,7 @@
 const cartIcon = document.getElementById('profile__cart');
 const cartModal = document.getElementById('cart');
 
+//MODAL
 cartIcon.addEventListener('click', function(event) {
     event.preventDefault();
 
@@ -14,6 +15,7 @@ cartIcon.addEventListener('click', function(event) {
 
 
 
+//nabvar desplegable
 const items = document.getElementById('items')
 const openBtn = document.getElementById('button-open')
 const closeBtn = document.getElementById('button-close')

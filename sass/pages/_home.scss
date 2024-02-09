@@ -1,19 +1,41 @@
 .main {
-    width: 100vw;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+
     .hero {
-        width: 77%;
-        height: 565px;
+        width: 90%;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
+
+        height: auto;
+        margin-bottom: 132px;
+
+        @include large-screen {
+            width: 95%;
+        }
+
+        @include m-large {
+            width: 98%;
+        }
+
+        @include medium {
+            flex-direction: column;
+        }
+
+        @include x-small {
+            margin-bottom: 88px;
+        }
 
         .hero__imgs {
-            width: 40.27%;
-            height: 565px;
+            /* width: 40.27%; */
+            width: 445px;
+            height: auto;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -23,10 +45,14 @@
                 width: 30.27%;
             }
 
+            @include x-small {
+                width: 100%;
+            }
+
             .img__xl {
                 width: 100%;
                 height: auto;
-                
+
 
                 img {
                     width: 100%;
@@ -35,11 +61,14 @@
             }
 
             .imgs__xs {
-                height: 100px;
+                height: auto;
                 width: 100%;
                 flex-wrap: wrap;
                 @include flex-group(flex, space-between, end);
 
+                @include x-small {
+                    display: none;
+                }
 
                 .img__item {
                     width: 88px;
@@ -60,21 +89,42 @@
                 width: 30.27%;
             }
 
+            @include x-small {
+                width: 100%;
+                height: auto;
+                padding: 24px 24px 0 24px;
+            }
+
             .info__company {
                 letter-spacing: 2px;
                 margin-bottom: 27px;
                 text-transform: uppercase;
                 @include typography(13px, 700, normal, normal, $primaryColor);
+
+                @include x-small {
+                    font-size: 12px;
+                    letter-spacing: 1.846px;
+                }
             }
 
             .info__title {
                 margin-bottom: 32px;
                 @include typography(44px, 700, 48px, normal, $grey-dark);
+
+                @include x-small {
+                    font-size: 28px;
+                    line-height: 32px;
+                }
             }
 
             .info__paragraph {
                 margin-bottom: 28px;
-                @include typography(16px, 400, 26px, normal, $grey); 
+                @include typography(16px, 400, 26px, normal, $grey);
+
+                @include x-small {
+                    font-size: 15px;
+                    line-height: 25px;
+                }
             }
 
             .info__price {
@@ -85,7 +135,7 @@
 
                 p {
                     margin-right: 16px;
-                    @include typography(28px, 700, normal, normal, $grey-dark); 
+                    @include typography(28px, 700, normal, normal, $grey-dark);
                 }
 
                 span {
@@ -94,19 +144,23 @@
                     border-radius: 6px;
                     background: #FFEEE2;
                     @include flex-group(flex, center, center);
-                    @include typography(16px, 700, normal, normal, $primaryColor); 
+                    @include typography(16px, 700, normal, normal, $primaryColor);
                 }
             }
 
             .info__discount {
                 margin-bottom: 32px;
                 text-decoration: line-through;
-                @include typography(16px, 700, 26px, normal, $grey-number); 
+                @include typography(16px, 700, 26px, normal, $grey-number);
             }
 
             .info__cart {
                 width: 100%;
                 @include flex-group(flex, space-between, center);
+
+                @include x-small {
+                    flex-direction: column;
+                }
 
                 .info__counter {
                     width: 157px;
@@ -117,11 +171,17 @@
                     padding: 19px 16px 19px 16px;
                     @include flex-group(flex, space-between, center);
 
+                    @include x-small {
+                        width: 100%;
+                        margin-bottom: 16px;
+                        margin-right: 0px;
+                    }
+
                     span {
-                        @include typography(16px, 700, normal, normal, $grey-dark); 
+                        @include typography(16px, 700, normal, normal, $grey-dark);
                     }
                 }
-                
+
             }
         }
     }
