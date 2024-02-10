@@ -20,6 +20,7 @@
     @include x-small {
         width: 100%;
         padding: 19px 24px 20px 24px;
+        height: auto;
     }
 
     .navbar__logo {
@@ -81,6 +82,10 @@
                 padding: 46px 25px 25px 25px;
                 background: #fff;
                 box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.75);
+            }
+
+            @include x-small {
+                padding: 24px 25px 25px 25px;
             }
 
             &.items--visible {

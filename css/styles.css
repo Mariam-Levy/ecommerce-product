@@ -135,6 +135,7 @@ body {
   .navbar {
     width: 100%;
     padding: 19px 24px 20px 24px;
+    height: auto;
   }
 }
 .navbar .navbar__logo {
@@ -210,6 +211,11 @@ body {
     padding: 46px 25px 25px 25px;
     background: #fff;
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.75);
+  }
+}
+@media (max-width: 395px) {
+  .navbar .navbar__items .items {
+    padding: 24px 25px 25px 25px;
   }
 }
 .navbar .navbar__items .items.items--visible {
@@ -355,11 +361,12 @@ body {
 }
 @media (max-width: 395px) {
   .cart {
-    width: 95%;
-    height: 45%;
-    right: 40px;
-    left: 128px;
-    position: initial;
+    display: block;
+    position: absolute;
+    height: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 18%;
   }
 }
 .cart .cart__title {
@@ -367,6 +374,14 @@ body {
   height: 26.6%;
   border-bottom: 1px solid #E4E9F2;
   margin-bottom: 24px;
+}
+@media (max-width: 395px) {
+  .cart .cart__title {
+    margin-bottom: 27px;
+  }
+  .cart .cart__title h3 {
+    font-size: 16px;
+  }
 }
 .cart .cart__empty {
   display: none;
@@ -386,6 +401,12 @@ body {
   width: 50px;
   height: 50px;
 }
+@media (max-width: 395px) {
+  .cart .cart__buy .buy__content .buy__img img {
+    width: 50px;
+    height: 50px;
+  }
+}
 .cart .cart__buy .buy__content .buy__texts {
   color: #69707D;
   font-family: "Kumbh Sans";
@@ -404,6 +425,11 @@ body {
 }
 .cart .cart__buy .buy__content .delete-icon {
   color: #C3CAD9;
+}
+@media (max-width: 395px) {
+  .cart .cart__buy .buy__content .delete-icon span {
+    font-size: 18px;
+  }
 }
 .cart .cart__buy .info__button {
   width: 100%;
@@ -443,6 +469,7 @@ body {
 }
 @media (max-width: 395px) {
   .main .hero {
+    width: 100%;
     margin-bottom: 88px;
   }
 }
@@ -471,7 +498,8 @@ body {
 }
 .main .hero .hero__imgs .img__xl img {
   width: 100%;
-  height: 445px;
+  height: 300px;
+  content: url("../../img/shoes-mobile.jpg");
 }
 .main .hero .hero__imgs .imgs__xs {
   height: auto;
@@ -554,13 +582,19 @@ body {
     line-height: 25px;
   }
 }
-.main .hero .hero__info .info__price {
+.main .hero .hero__info .info__amount {
   width: 100%;
   display: flex;
+  margin-bottom: 24px;
+  height: auto;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
 }
-.main .hero .hero__info .info__price p {
+.main .hero .hero__info .info__amount .info__price {
+  display: flex;
+  align-items: center;
+}
+.main .hero .hero__info .info__amount .info__price p {
   margin-right: 16px;
   font-size: 28px;
   font-weight: 700;
@@ -568,7 +602,7 @@ body {
   font-style: normal;
   color: #1D2026;
 }
-.main .hero .hero__info .info__price span {
+.main .hero .hero__info .info__amount .info__price span {
   width: 51px;
   height: 27px;
   border-radius: 6px;
@@ -582,8 +616,7 @@ body {
   font-style: normal;
   color: #FF7E1B;
 }
-.main .hero .hero__info .info__discount {
-  margin-bottom: 32px;
+.main .hero .hero__info .info__amount .info__discount {
   text-decoration: line-through;
   font-size: 16px;
   font-weight: 700;
