@@ -53,6 +53,9 @@
             .img__xl {
                 width: 100%;
                 height: auto;
+                @include x-small {
+                    position: relative;
+                }
 
                 img {
                     width: 100%;

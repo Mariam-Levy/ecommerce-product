@@ -14,7 +14,7 @@
         width: 6%;
     }
 
-    
+
 
     .open {
         margin-right: 16px;
@@ -49,6 +49,7 @@
     color: $primaryColor;
     font-size: 30px;
     cursor: pointer;
+
     span {
         color: #FF7E1B;
     }
@@ -72,10 +73,11 @@
         cursor: pointer;
         @include flex-group(flex, center, center);
         @include typography(16px, 700, normal, normal, $white);
-        
+
         &:hover {
             background-color: #FFAB6A;
         }
+
         &:active {
             transform: scale(0.95);
         }
@@ -92,4 +94,29 @@
             box-shadow: none;
         }
     }
+}
+
+.btn-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 16px;
+
+    .btn-slide {
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        border: none;
+        background: #fff;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+    }
+
 }
