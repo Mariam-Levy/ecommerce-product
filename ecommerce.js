@@ -54,3 +54,24 @@ btns.forEach(function(btn) {
 
 
 
+/* document.getElementById('imagen').addEventListener('click', function() {
+    document.getElementById('overlay').style.display = 'block';
+    // Aquí puedes cargar los elementos de otro HTML dentro del DOM, por ejemplo:
+    fetch('otroHTML.html')
+        .then(response => response.text())
+        .then(data => {
+        document.body.innerHTML += data;
+    });
+}); */
+
+document.getElementById('imagen').addEventListener('click', function() {
+    document.getElementById('overlay').style.display = 'block';
+    // Aquí puedes cargar los elementos de otro HTML dentro del DOM, por ejemplo:
+    fetch('otroHTML.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('overlay').innerHTML = data;
+    });
+}); 
+
+

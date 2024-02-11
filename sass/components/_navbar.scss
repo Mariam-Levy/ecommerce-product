@@ -7,7 +7,8 @@
 
     /* width: 100%; */
     width: 90%;
-    padding: 24px 24px 28px;
+    /* padding: 24px 24px 28px; */
+    padding: 24px 24px 0px 24px;
 
     @include m-large {
         /* width: 90%; */
@@ -15,6 +16,9 @@
 
     @include medium {
         margin-bottom: 0;
+        width: 100%;
+        padding: 19px 24px 20px 24px;
+        height: auto;
     }
 
     @include x-small {
@@ -55,6 +59,7 @@
         }
         @include x-small {
             width: 53%;
+            z-index: 2;
         }
 
         .items {
@@ -79,7 +84,8 @@
                 justify-content: normal;
                 align-items: start;
                 /* padding: 25px; */
-                padding: 46px 25px 25px 25px;
+                /* padding: 46px 25px 25px 25px; */
+                padding: 27px 25px 25px 25px;
                 background: #fff;
                 box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.75);
             }
