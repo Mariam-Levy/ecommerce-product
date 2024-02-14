@@ -54,24 +54,20 @@ btns.forEach(function(btn) {
 
 
 
-/* document.getElementById('imagen').addEventListener('click', function() {
-    document.getElementById('overlay').style.display = 'block';
-    // Aquí puedes cargar los elementos de otro HTML dentro del DOM, por ejemplo:
-    fetch('otroHTML.html')
-        .then(response => response.text())
-        .then(data => {
-        document.body.innerHTML += data;
-    });
-}); */
-
 document.getElementById('imagen').addEventListener('click', function() {
-    document.getElementById('overlay').style.display = 'block';
-    // Aquí puedes cargar los elementos de otro HTML dentro del DOM, por ejemplo:
-    fetch('otroHTML.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('overlay').innerHTML = data;
-    });
-}); 
+  window.location.href = 'slider.html'; // Redirige al segundo archivo HTML
+});
 
 
+//_________________ 
+function cambiarImagen(elemento, nuevaImagen) {
+  let imagenPrincipal = document.getElementById('imagen-principal');
+  imagenPrincipal.src = nuevaImagen;
+
+  const imagenesPequenas = document.querySelectorAll('.imagen-pequena');
+  imagenesPequenas.forEach(function(img) {
+    img.classList.remove('imagen-pequena--seleccionada')
+  });
+
+  elemento.classList.add('imagen-pequena--seleccionada')
+}

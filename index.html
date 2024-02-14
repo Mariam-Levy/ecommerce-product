@@ -19,7 +19,7 @@
             <button id="button-open" class="button-open"><span class="material-symbols-outlined open">density_medium</span></button>
             
             <div class="navbar__logo">
-                <img src="./img/logo-sneakers.svg" alt="">
+                <img class="navbar__img" src="./img/logo-sneakers.svg" alt="">
             </div>
 
             <div class="navbar__items">
@@ -42,7 +42,13 @@
                     </div>
                 </ul>
                 <div class="profile">
-                    <a id="profile__cart" class="profile__cart" href=""><span class="material-symbols-outlined">shopping_cart</span></a>
+                    <!-- <a id="profile__cart" class="profile__cart" href="">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                    </a> -->
+                    <div id="profile__cart" class="profile__cart">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                        <div id="cantidadCarrito" class="cantidad-carrito">1</div>
+                    </div>
                     <a class="profile__photo" href=""><img src="./img/profile.svg" alt=""></a>
                 </div>
 
@@ -78,7 +84,7 @@
         <div class="hero">
             <div class="hero__imgs">
                 <div id="imagen" class="img__xl">
-                    <img src="./img/shoes.jpg" alt="">
+                    <img class="imagen-principal" id="imagen-principal" src="./img/shoes.jpg" alt="">
                 </div>
                 <div class="btn-container">
                     <button class="btn-slide prevBtn" type="button"><span class="material-symbols-outlined">chevron_left</span></button>
@@ -86,21 +92,20 @@
                 </div>
                 <div class="imgs__xs">
                     <div class="img__item">
-                        <img src="./img/shoes2.jpg" alt="">
+                        <img class="imagen-pequena imagen-pequena--seleccionada" src="./img/shoes.jpg" alt="" onclick="cambiarImagen(this, './img/shoes.jpg')">
                     </div>
                     <div class="img__item">
-                        <img src="./img/shoes2.jpg" alt="">
+                        <img class="imagen-pequena" src="./img/shoes2.jpg" alt="" onclick="cambiarImagen(this, './img/shoes2.jpg')">
                     </div>
                     <div class="img__item">
-                        <img src="./img/shoes3.jpg" alt="">
+                        <img class="imagen-pequena" src="./img/shoes3.jpg" alt="" onclick="cambiarImagen(this, './img/shoes3.jpg')">
                     </div>
                     <div class="img__item" >
-                        <img src="./img/shoes4.jpg" alt="">
+                        <img class="imagen-pequena" src="./img/shoes4.jpg" alt="" onclick="cambiarImagen(this, './img/shoes4.jpg')">
                     </div>
                 </div>
                 
             </div>
-
 
             <div class="hero__info">
                 <p class="info__company">Sneaker Company</p>
