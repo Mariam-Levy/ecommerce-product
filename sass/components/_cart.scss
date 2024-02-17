@@ -98,6 +98,7 @@
 
             .delete-icon {
                 color: #C3CAD9;
+                cursor: pointer;
                 @include x-small {
                     span {
                         font-size: 18px;

@@ -2,7 +2,7 @@
 const cartIcon = document.getElementById('profile__cart');
 const cartModal = document.getElementById('cart');
 
-//MODAL
+//MODAL del carrito de compras
 cartIcon.addEventListener('click', function(event) {
     event.preventDefault();
 
@@ -15,23 +15,53 @@ cartIcon.addEventListener('click', function(event) {
 
 
 
-//nabvar desplegable
+
+
+
+
+
+
+
+// ------ nabvar desplegable -------
 const items = document.getElementById('items')
 const openBtn = document.getElementById('button-open')
 const closeBtn = document.getElementById('button-close')
-
 
 openBtn.addEventListener('click', function() {
     items.classList.add('items--visible')
 })
 closeBtn.addEventListener('click', function() {
     items.classList.remove('items--visible')
-})
+});
 
 
 
-//contador
-let count = 0;
+// ----- contador ------- 
+let quantity = 0;
+
+function increaseQuantity() {
+    quantity++;
+    document.getElementById('value').innerText = quantity;
+}
+
+function decreaseQuantity() {
+    if (quantity > 0) {
+        quantity--;
+        document.getElementById('value').innerText = quantity;
+    }
+}
+
+function addToCart() {
+    const currentQuantity = parseInt(document.getElementById('value').innerText);
+    const totalQuantity = parseInt(document.getElementById('cantidadCarrito').innerText);
+    const newTotal = currentQuantity + totalQuantity;
+    document.getElementById('cantidadCarrito').innerText = newTotal;
+    
+    quantity = 0;
+    document.getElementById('value').innerText = quantity;
+}
+
+/* let count = 0;
 const value = document.getElementById('value');
 const btns = document.querySelectorAll('.btn');
 
@@ -50,16 +80,17 @@ btns.forEach(function(btn) {
         }
         value.textContent = count;
     })
-})
+}); */
 
 
-
+// ------ Redirige al segundo archivo HTML ----
 document.getElementById('imagen').addEventListener('click', function() {
-  window.location.href = 'slider.html'; // Redirige al segundo archivo HTML
+  window.location.href = 'slider.html'; 
 });
 
 
-//_________________ 
+
+// cambio de imagenes pequeñas a grandes
 function cambiarImagen(elemento, nuevaImagen) {
   let imagenPrincipal = document.getElementById('imagen-principal');
   imagenPrincipal.src = nuevaImagen;
@@ -71,3 +102,7 @@ function cambiarImagen(elemento, nuevaImagen) {
 
   elemento.classList.add('imagen-pequena--seleccionada')
 }
+
+
+
+

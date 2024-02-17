@@ -46,8 +46,8 @@
                         <span class="material-symbols-outlined">shopping_cart</span>
                     </a> -->
                     <div id="profile__cart" class="profile__cart">
-                        <span class="material-symbols-outlined">shopping_cart</span>
-                        <div id="cantidadCarrito" class="cantidad-carrito">1</div>
+                        <span id="carrito" class="material-symbols-outlined">shopping_cart</span>
+                        <div id="cantidadCarrito" class="cantidad-carrito">0</div>
                     </div>
                     <a class="profile__photo" href=""><img src="./img/profile.svg" alt=""></a>
                 </div>
@@ -71,12 +71,12 @@
                     </div>
                     <div class="buy__texts">
                         <p>Fall Limited Edition Sneakers</p>
-                        <p>$125.00 x <span class="amount">3</span> <span class="total-price">$375.00</span></p>
+                        <p>$125.00 x <span id="amount" class="amount">3</span> <span class="total-price">$0.00</span></p>
                     </div>
                     <div class="delete-icon"><span class="material-symbols-outlined">delete</span></div>
                 </div>
                 <div class="info__button">
-                    <button class="button__cart button__cart--modal">Checkout</button>
+                    <button id="checkoutBtn" class="button__cart button__cart--modal" onclick="addToCart()">Checkout</button>
                 </div>
             </div>
         </div>
@@ -122,14 +122,12 @@
                 </div>
                 <div class="info__cart">
                     <div class="info__counter">
-                        <button class="btn decrease"><span class="material-symbols-outlined">
-                            check_indeterminate_small
-                            </span></button>
+                        <button class="btn decrease" onclick="decreaseQuantity()"><span class="material-symbols-outlined">check_indeterminate_small</span></button>
                         <span id="value">0</span>
-                        <button class="btn increase"><span class="material-symbols-outlined">add</span></button>
+                        <button class="btn increase" onclick="increaseQuantity()"><span class="material-symbols-outlined">add</span></button>
                     </div>
                     <div class="info__button">
-                        <button class="button__cart"><span class="material-symbols-outlined">shopping_cart</span>Add to cart</button>
+                        <button class="button__cart" onclick="addToCart()"><span class="material-symbols-outlined">shopping_cart</span>Add to cart</button>
                     </div>
                 </div>
             </div>

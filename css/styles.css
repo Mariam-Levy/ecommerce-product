@@ -335,6 +335,7 @@ body {
   }
 }
 .navbar .navbar__items .profile .profile__cart .cantidad-carrito {
+  display: none;
   position: absolute;
   top: -9px;
   right: -9px;
@@ -477,6 +478,7 @@ body {
 }
 .cart .cart__buy .buy__content .delete-icon {
   color: #C3CAD9;
+  cursor: pointer;
 }
 @media (max-width: 395px) {
   .cart .cart__buy .buy__content .delete-icon span {
