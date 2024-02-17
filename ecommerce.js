@@ -15,13 +15,6 @@ cartIcon.addEventListener('click', function(event) {
 
 
 
-
-
-
-
-
-
-
 // ------ nabvar desplegable -------
 const items = document.getElementById('items')
 const openBtn = document.getElementById('button-open')
@@ -37,50 +30,84 @@ closeBtn.addEventListener('click', function() {
 
 
 // ----- contador ------- 
-let quantity = 0;
 
-function increaseQuantity() {
-    quantity++;
-    document.getElementById('value').innerText = quantity;
-}
+/* let quantity = 0;
+    const pricePerItem = 125.00; // Precio fijo de los zapatos
 
-function decreaseQuantity() {
-    if (quantity > 0) {
-        quantity--;
+    function increaseQuantity() {
+        quantity++;
+        document.getElementById('value').innerText = quantity;
+        updateAmountAndTotal();
+    }
+
+    function decreaseQuantity() {
+        if (quantity > 0) {
+            quantity--;
+            document.getElementById('value').innerText = quantity;
+            updateAmountAndTotal();
+        }
+    }
+
+    function addToCart() {
+        const currentQuantity = parseInt(document.getElementById('value').innerText);
+        const totalQuantity = parseInt(document.getElementById('cantidadCarrito').innerText);
+        const newTotal = currentQuantity + totalQuantity;
+        document.getElementById('cantidadCarrito').innerText = newTotal;
+        updateAmountAndTotal(); // Actualizamos aquí también
+        quantity = 0;
         document.getElementById('value').innerText = quantity;
     }
-}
 
-function addToCart() {
-    const currentQuantity = parseInt(document.getElementById('value').innerText);
-    const totalQuantity = parseInt(document.getElementById('cantidadCarrito').innerText);
-    const newTotal = currentQuantity + totalQuantity;
-    document.getElementById('cantidadCarrito').innerText = newTotal;
-    
-    quantity = 0;
-    document.getElementById('value').innerText = quantity;
-}
+    function updateAmountAndTotal() {
+        const currentQuantity = parseInt(document.getElementById('value').innerText);
+        const totalPrice = currentQuantity * pricePerItem; // Aquí corregimos el cálculo
+        document.getElementById('amount').innerText = currentQuantity;
+        document.getElementById('totalPrice').innerText = '$' + totalPrice.toFixed(2);
+    } */
 
-/* let count = 0;
-const value = document.getElementById('value');
-const btns = document.querySelectorAll('.btn');
 
-btns.forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-        const styles = e.currentTarget.classList;
+    let quantity = 0;
+    const pricePerItem = 125.00; // Precio fijo de los zapatos
 
-        if(styles.contains('decrease')) {
-            if(count > 0) {
-                count--;
-                value.textContent = count;
-            }
-        } else if (styles.contains('increase')) {
-            count++;
-            value.textContent = count;
+    function increaseQuantity() {
+        quantity++;
+        document.getElementById('value').innerText = quantity;
+        updateAmountAndTotal();
+    }
+
+    function decreaseQuantity() {
+        if (quantity > 0) {
+            quantity--;
+            document.getElementById('value').innerText = quantity;
+            updateAmountAndTotal();
         }
-        value.textContent = count;
-    })
-}); */
+    }
+
+    function addToCart() {
+        const currentQuantity = parseInt(document.getElementById('value').innerText);
+        const totalQuantity = parseInt(document.getElementById('cantidadCarrito').innerText);
+        const newTotal = currentQuantity + totalQuantity;
+        document.getElementById('cantidadCarrito').innerText = newTotal;
+        updateAmountAndTotal(); // Actualizamos aquí también
+        quantity = 0;
+        document.getElementById('value').innerText = quantity;
+    }
+
+    function updateAmountAndTotal() {
+        const currentQuantity = parseInt(document.getElementById('value').innerText);
+        const totalPrice = currentQuantity * pricePerItem; // Aquí corregimos el cálculo
+        document.getElementById('amount').innerText = currentQuantity;
+        document.getElementById('totalPrice').innerText = '$' + totalPrice.toFixed(2);
+    }
+
+    function resetValues() {
+        quantity = 0;
+        document.getElementById('value').innerText = quantity;
+        document.getElementById('amount').innerText = quantity;
+        document.getElementById('cantidadCarrito').innerText = 0;
+        document.getElementById('totalPrice').innerText = '$0.00';
+    }
+
 
 
 // ------ Redirige al segundo archivo HTML ----
