@@ -1,4 +1,3 @@
-
 const cartIcon = document.getElementById('profile__cart');
 const cartModal = document.getElementById('cart');
 
@@ -30,41 +29,6 @@ closeBtn.addEventListener('click', function() {
 
 
 // ----- contador ------- 
-
-/* let quantity = 0;
-    const pricePerItem = 125.00; // Precio fijo de los zapatos
-
-    function increaseQuantity() {
-        quantity++;
-        document.getElementById('value').innerText = quantity;
-        updateAmountAndTotal();
-    }
-
-    function decreaseQuantity() {
-        if (quantity > 0) {
-            quantity--;
-            document.getElementById('value').innerText = quantity;
-            updateAmountAndTotal();
-        }
-    }
-
-    function addToCart() {
-        const currentQuantity = parseInt(document.getElementById('value').innerText);
-        const totalQuantity = parseInt(document.getElementById('cantidadCarrito').innerText);
-        const newTotal = currentQuantity + totalQuantity;
-        document.getElementById('cantidadCarrito').innerText = newTotal;
-        updateAmountAndTotal(); // Actualizamos aquí también
-        quantity = 0;
-        document.getElementById('value').innerText = quantity;
-    }
-
-    function updateAmountAndTotal() {
-        const currentQuantity = parseInt(document.getElementById('value').innerText);
-        const totalPrice = currentQuantity * pricePerItem; // Aquí corregimos el cálculo
-        document.getElementById('amount').innerText = currentQuantity;
-        document.getElementById('totalPrice').innerText = '$' + totalPrice.toFixed(2);
-    } */
-
 
     let quantity = 0;
     const pricePerItem = 125.00; // Precio fijo de los zapatos

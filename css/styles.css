@@ -115,7 +115,6 @@ body {
   .btn-container {
     display: block;
     position: absolute;
-    /* top: 50%; */
     top: 23%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -146,11 +145,6 @@ body {
   margin-bottom: 90px;
   width: 90%;
   padding: 24px 24px 0px 24px;
-}
-@media (max-width: 1024px) {
-  .navbar {
-    /* width: 90%; */
-  }
 }
 @media (max-width: 767px) {
   .navbar {
@@ -391,13 +385,8 @@ body {
   border-radius: 10px;
   background: #FFFFFF;
   box-shadow: 0px 20px 50px -20px rgba(29, 32, 38, 0.5);
-  /* display: block; */
   position: absolute;
   height: auto;
-  /* width: calc(96% - 2px); */
-  /* right: 0;
-  left: 0;
-  margin: 0 auto; */
   right: 142px;
   width: 35%;
 }
@@ -414,7 +403,6 @@ body {
 }
 @media (max-width: 395px) {
   .cart {
-    /* display: block; */
     position: absolute;
     height: auto;
     left: 50%;
@@ -529,7 +517,6 @@ body {
   }
 }
 .main .hero .hero__imgs {
-  /* width: 40.27%; */
   width: 445px;
   height: auto;
   display: flex;
@@ -588,7 +575,6 @@ body {
 .main .hero .hero__imgs .imgs__xs .img__item {
   width: 88px;
   height: 88px;
-  /* transition: opacity 0.3s ease, border-color 0.3s ease; */
   border-radius: 10px;
   border: 2px solid transparent;
 }
@@ -790,7 +776,6 @@ img {
   height: auto;
 }
 
-/* Slideshow container */
 .slideshow-container {
   position: relative;
   border: 1px solid red;
@@ -813,7 +798,6 @@ img {
   cursor: pointer;
 }
 
-/* Next & previous buttons */
 .prev,
 .next {
   cursor: pointer;
@@ -833,7 +817,6 @@ img {
   align-items: center;
 }
 
-/* Position the "next button" to the right */
 .prev {
   left: 0;
 }
@@ -842,13 +825,11 @@ img {
   right: 0;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
   color: orangered;
 }
 
-/* Caption text */
 .text {
   color: #f2f2f2;
   font-size: 15px;
@@ -859,7 +840,6 @@ img {
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -872,7 +852,6 @@ img {
   border: 1px solid green;
 }
 
-/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
   margin: 0 2px;
@@ -888,10 +867,8 @@ img {
 .dot:hover {
   opacity: 0.75;
   background: #000;
-  /* background-color: #717171; */
 }
 
-/* Fading animation */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
@@ -905,7 +882,6 @@ img {
     opacity: 1;
   }
 }
-/* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev,
   .next,

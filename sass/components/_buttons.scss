@@ -14,8 +14,6 @@
         width: 6%;
     }
 
-
-
     .open {
         margin-right: 16px;
         font-size: 20px;
@@ -98,7 +96,6 @@
     @include x-small {
         display: block;
         position: absolute;
-        /* top: 50%; */
         top: 23%;
         left: 50%;
         transform: translate(-50%, -50%);

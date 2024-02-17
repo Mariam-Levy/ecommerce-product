@@ -8,7 +8,6 @@ body {
 }
 
 .container {
-  border: 1px solid red;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -31,12 +30,12 @@ body {
   vertical-align: middle;
   width: 100%;
   height: auto;
+  border-radius: 20px;
 }
 
 /* Slideshow container */
 .slideshow-container {
   position: relative;
-  border: 1px solid red;
   width: 38.19%;
   height: auto;
 
@@ -47,7 +46,6 @@ body {
 }
 
 .close {
-  border: 1px solid yellow;
   margin-bottom: 24px;
   width: 90%;
   color: #fff;
@@ -55,6 +53,10 @@ body {
   align-items: center;
   justify-content: end;
   cursor: pointer;
+}
+
+.close:hover {
+  color: orange;
 }
 
 /* Next & previous buttons */
@@ -89,7 +91,7 @@ body {
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-  color: orangered;
+  color: orange;
 }
 
 /* Caption text */
@@ -112,9 +114,6 @@ body {
   top: 0;
 }
 
-.dot__container {
-  border: 1px solid green;
-}
 
 /* The dots/bullets/indicators */
 .dot {
@@ -133,7 +132,6 @@ body {
 .dot:hover {
   opacity: 0.75;
   background: #000;
-  /* background-color: #717171; */
 }
 
 /* Fading animation */
@@ -151,11 +149,3 @@ body {
   }
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev,
-  .next,
-  .text {
-    font-size: 11px;
-  }
-}

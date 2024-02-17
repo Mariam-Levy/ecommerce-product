@@ -7,10 +7,6 @@
     width: 90%;
     padding: 24px 24px 0px 24px;
 
-    @include m-large {
-        /* width: 90%; */
-    }
-
     @include medium {
         margin-bottom: 0;
         width: 100%;
